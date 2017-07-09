@@ -1,7 +1,7 @@
 {
     "name": "pwm/bitset",
     "type": "library",
-    "description": "A simple Bit set implementation",
+    "description": "A simple Bit Set implementation",
     "license": "MIT",
     "authors": [
         {
