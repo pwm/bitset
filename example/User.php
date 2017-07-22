@@ -7,40 +7,33 @@ use Pwm\BitSet\BitSet;
 
 class User
 {
-    private $groups = 0b0;
+    private $groups = BitSet::EMPTY;
 
     public function getGroups(): array
     {
-        return self::toGroups(BitSet::get($this->groups));
+        return Group::toGroups(BitSet::get($this->groups));
     }
 
     public function setGroups(array $groups): void
     {
-        $this->groups = BitSet::set(self::fromGroups($groups));
+        $this->groups = BitSet::set(Group::fromGroups($groups));
     }
 
     public function addGroups(array $groups): void
     {
-        $this->groups = BitSet::add($this->groups, self::fromGroups($groups));
+        $this->groups = BitSet::add($this->groups, Group::fromGroups($groups));
     }
 
     public function removeGroups(array $groups): void
     {
-        $this->groups = BitSet::remove($this->groups, self::fromGroups($groups));
+        $this->groups = BitSet::remove($this->groups, Group::fromGroups($groups));
     }
 
     public function hasGroup(string $group): bool
     {
-        return BitSet::has($this->groups, self::fromGroups([$group])[0]);
-    }
-
-    private static function fromGroups(array $groups): array
-    {
-        return array_values(array_intersect_key(Group::GROUPS, array_flip($groups)));
-    }
-
-    private static function toGroups(array $values): array
-    {
-        return array_values(array_intersect_key(array_flip(Group::GROUPS), array_flip($values)));
+        $a = Group::fromGroups([$group]);
+        return isset($a[0])
+            ? BitSet::has($this->groups, $a[0])
+            : false;
     }
 }
