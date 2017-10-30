@@ -129,6 +129,8 @@ Predicate that tells whether an element is in a bit set or not.
 ## Tests
 
 	$ vendor/bin/phpunit
+	$ composer phpcs
+	$ composer phpstan
 
 ## Changelog
 
