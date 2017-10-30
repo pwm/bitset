@@ -1,5 +1,10 @@
 # BitSet
 
+[![Build Status](https://travis-ci.org/pwm/bitset.svg?branch=master)](https://travis-ci.org/pwm/bitset)
+[![Maintainability](https://api.codeclimate.com/v1/badges/8a9d4702ab0538377dfc/maintainability)](https://codeclimate.com/github/pwm/bitset/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/8a9d4702ab0538377dfc/test_coverage)](https://codeclimate.com/github/pwm/bitset/test_coverage)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 A simple bit set implementation for compact storage of sets of values. The library itself is stateless providing only pure mapping functions.
 
 ## Requirements
