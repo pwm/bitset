@@ -7,6 +7,15 @@
 
 A simple bit set implementation for compact storage of sets of values. The library itself is stateless providing only pure mapping functions.
 
+## Table of Contents
+
+* [Requirements](#requirements)
+* [Installation](#installation)
+* [Usage](#usage)
+* [How it works](#how-it-works)
+* [Tests](#tests)
+* [Changelog](#changelog)
+
 ## Requirements
 
 PHP 7.1+
