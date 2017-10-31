@@ -15,6 +15,7 @@ A simple bit set implementation for compact storage of sets of values. The libra
 * [How it works](#how-it-works)
 * [Tests](#tests)
 * [Changelog](#changelog)
+* [Licence](#licence)
 
 ## Requirements
 
@@ -149,3 +150,7 @@ Predicate that tells whether an element is in a bit set or not.
 ## Changelog
 
 [Click here](changelog.md)
+
+## Licence
+
+[MIT](LICENSE)
