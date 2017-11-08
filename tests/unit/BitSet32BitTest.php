@@ -25,7 +25,7 @@ class BitSet32BitTest extends TestCase
         $max32bit = 0b1111111111111111111111111111111; // 2^31 − 1
 
         $bitSet = BitSet::set($b32a);
-        static::assertSame($max32bit, $bitSet);
-        static::assertSame(0b0, BitSet::remove($bitSet, $b32a));
+        self::assertSame($max32bit, $bitSet);
+        self::assertSame(0b0, BitSet::remove($bitSet, $b32a));
     }
 }

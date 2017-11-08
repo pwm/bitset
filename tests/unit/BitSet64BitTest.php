@@ -33,7 +33,7 @@ class BitSet64BitTest extends TestCase
         $max64bit = 0b111111111111111111111111111111111111111111111111111111111111111; // 2^63 − 1
 
         $bitSet = BitSet::set($b64a);
-        static::assertSame($max64bit, $bitSet);
-        static::assertSame(0b0, BitSet::remove($bitSet, $b64a));
+        self::assertSame($max64bit, $bitSet);
+        self::assertSame(0b0, BitSet::remove($bitSet, $b64a));
     }
 }
